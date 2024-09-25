@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preview of video content site for customer">
+    <title>Video Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        article {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .origin {
+            font-size: 14px;
+            color: #666;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Video Preview Page</h1>
+</header>
+
+<section>
+    <!-- Repeat this article block for each video entry -->
+    <article>
+        <h2>Video Title 1</h2>
+        <p class="origin">Origin: YouTube</p>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </article>
+
+    <!-- Add 19 more entries here following the same structure -->
+    <article>
+        <h2>Video Title 2</h2>
+        <p class="origin">Origin: YouTube</p>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </article>
+    <!-- Continue for 18 more video entries -->
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
