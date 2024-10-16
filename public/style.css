@@ -1,0 +1,96 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Video list styles */
+.video-list {
+    display: flex;
+    flex-wrap: wrap;         /* Allows items to wrap when there's not enough space */
+    gap: 20px;               /* Space between items */
+    justify-content: center; /* Center the items on the page */
+}
+
+.video-item {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Each video will now take up 25% of the width, minus the gap */
+    text-align: center;
+}
+
+/* Ensure the embedded video (iframe) scales down */
+.video-item iframe {
+    width: 100%;              /* Make iframe fill the width of the parent */
+    height: 180px;            /* Adjust the height as needed to maintain a good aspect ratio */
+}
+
+.video-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.video-item p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Specific styling for YouTube and Vimeo videos */
+.video-item:nth-child(odd) {
+    background-color: #f9f9f9;   /* Lighter background for YouTube (or first video) */
+}
+
+.video-item:nth-child(even) {
+    background-color: #e9e9e9;   /* Slightly darker background for Vimeo (or second video) */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .video-item {
+        width: calc(33.33% - 20px); /* 3 videos per row on smaller screens */
+    }
+
+    .video-item iframe {
+        height: 160px;               /* Adjust height to maintain a good aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        width: calc(50% - 20px);    /* 2 videos per row on smaller screens */
+    }
+
+    .video-item iframe {
+        height: 140px;               /* Adjust height to fit smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        width: 100%;                /* 1 video per row on very small screens */
+    }
+
+    .video-item iframe {
+        height: 200px;               /* Slightly larger for full-width display */
+    }
+}
